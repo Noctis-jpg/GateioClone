@@ -1,0 +1,7 @@
+@import './bootstrap_overrides.scss'; // Import Bootstrap overrides SCSS to customize Bootstrap styles 
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';// Import Bootstrap CSS from node_modules
+@import './style.scss';// Import main SCSS code
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');// Import Google Fonts
+@import '../../node_modules/swiper/swiper-bundle.css';// Import Swiper CSS from node_modules
+@import './responsive.scss';// Import responsive SCSS styles
+
