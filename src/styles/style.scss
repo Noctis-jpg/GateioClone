@@ -2,6 +2,15 @@ $Btncolor :#2354e6;
 $WhiteColor: #fff;
 $black :  #000;
 $Gray : #646464;
+$Transparent : #ebedf2;
+$OldGray : #70798c;
+h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+.ym_SwiperClass{
+    max-width: 85%;
+}
 header {
     display: flex;
     -webkit-box-pack: justify;
@@ -19,7 +28,10 @@ header {
 
     .ym_gap {
         gap: .5%;
-
+        align-items: center;
+        justify-content: start;
+        padding: 0 !important;
+    
         .Buttons {
             height: fit-content;
             margin-right: 6px;
@@ -48,7 +60,23 @@ header {
                 text-decoration: none;
             }
         }
-
+        .MegamenuAfter{
+            position: relative;
+            &::after {
+                font-family: FontAwesome;
+                content: "\f0dd";
+                display: inline-block;
+                top: 0;
+                vertical-align: middle;
+                font-weight: 900;
+                color: white;
+                position: absolute;
+                left: 25px;
+                bottom: 0px;
+                font-size: 13px;
+                transition: .3s all ease-in-out;
+            }
+        }
         .SVGicons {
             display: flex;
             align-items: center;
@@ -60,8 +88,8 @@ header {
                 position: absolute;
                 visibility: hidden;
                 opacity: 0;
-                width: 500px;
-                max-width: 700px;
+                height: 500px;
+                width: 1200px;
                 transform: translate(-200%);
                 z-index: 99;
                 box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 24px;
@@ -69,15 +97,34 @@ header {
                 border: 1px solid $WhiteColor;
                 z-index: 9;
                 border-radius: 16px;
-                top: 50px;
+                top: 40px;
+    padding: 16px 16px 24px;
+    overflow-y: auto;
+
+                .littleHead{
+                    font-size: 12px;
+                    color: $Gray;
+                    padding: 14px;
+                }
                 .sub-menu-list {
                     list-style: none;
                     margin: 0;
                     padding: 0;
 
+                    .IconSubMenu{
+                        display: flex;
+                        align-items: start;
+                        justify-content: center;
+                        gap: 4%;
+                    }
+
                     li {
                         padding: 10px 0;
                         margin: 0;
+                        padding: 14px;
+                        &:hover{
+                            background-color: #f5f5f7;
+                        }
 
                         a {
                             text-decoration: none;
@@ -118,23 +165,144 @@ header {
                 .sub-menu {
                     visibility: visible;
                     opacity: 1;
-                    transform: translate(-50%);
+                    transform: translate(-20%);
                 }
             }
 
-            &::after {
-                font-family: FontAwesome;
-                content: "\f0dd";
-                display: inline-block;
-                top: 0;
-                vertical-align: middle;
-                font-weight: 900;
-                color: white;
-                position: absolute;
-                left: 25px;
-                bottom: 0px;
-                font-size: 13px;
-                transition: .3s all ease-in-out;
+
+        }
+        .HeadMenu{
+            #ListMenu{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                margin-bottom: 0;
+                li{
+                    position: relative;
+                    display: flex;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    height: 100%;
+                    margin: 0px 8px;
+                    padding: 10px 0px;
+                    list-style: none;
+                    a{
+                        font-size: 15px;
+                        color: $WhiteColor;
+                        transition: .3s;
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        a{
+                            color: $Btncolor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .rightFlex{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+   
+    .RightMenu{
+        gap: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    width: 100%;
+        a{
+            font-size: 14px;
+            text-decoration: none;
+            color: $WhiteColor;
+        }
+        .btn{
+            border-radius: 5px;
+            padding: 3px 11px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        svg{
+            color: $WhiteColor;
+            font-size: 18px;
+        }
+    }
+}
+}
+
+.HeroArea{
+    .middleArea{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .LeftHeroCapsul{
+        h1{
+
+        }
+        p{
+            font-weight: 500;
+        }
+        span{
+            font-size: 14px;
+            color: $Gray;
+            svg{
+                font-size: 18px;
+                margin: 0 .5rem;
+            }
+        }
+        form{
+            margin-top: 30px;
+            input{
+                background-color: $Transparent;
+                outline: none;
+            }
+            button{
+                background-color: $Btncolor;
+                color: $WhiteColor;
+                border: none;
+                border-radius: 5px;
+            }
+            .HerosIcons{
+                display: flex;
+                flex-direction: row;
+                margin-left: .5rem;
+                .icons{
+                    display: block;
+                    padding: 1rem;
+                    background-color: $Transparent;
+                    margin: 0 .5rem;
+                    border-radius: 5px;
+                    svg{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .counter-container{
+            margin-top: 60px;
+
+            .counter{
+                font-size: 30px;
+                font-weight: 600;
+            .Dollar{
+font-size: 32px;
+font-weight: 500;
+            }
+                .smallCountertEXT{
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: $black;
+                    margin-left: 3px;
+                }
+
+            }
+            .counter-text{
+                color: $OldGray;
+                font-size: 12px;
             }
         }
     }

@@ -1,9 +1,9 @@
 import RootLayout from '../components/layout';
-
+import HeroArea from '../components/HeroArea'
 const Home = () => {
   return (
     <main>
-        İçerik
+      <HeroArea />
     </main>
   );
 };
