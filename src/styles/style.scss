@@ -1,500 +1,677 @@
-$Btncolor :#2354e6;
+$Btncolor: #2354e6;
 $WhiteColor: #fff;
-$black :  #000;
-$Gray : #646464;
-$Transparent : #ebedf2;
-$OldGray : #70798c;
-$bgColorGray :#f8f9fb;
-h1{
-    font-size: 48px;
-    font-weight: 700;
+$black: #000;
+$Gray: #646464;
+$Transparent: #ebedf2;
+$OldGray: #70798c;
+$bgColorGray: #f8f9fb;
+h1 {
+  font-size: 48px;
+  font-weight: 700;
 }
-.ym_SwiperClass{
-    max-width: 95%;
+.ym_SwiperClass {
+  max-width: 95%;
 }
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
+}
+.noDeco {
+  text-decoration: none;
+}
+.changeGreen{
+    color: #1bb273 !important;
+    font-size: 14px;
+}
+.Price{
+    font-size: 14px;
+}
+.Strong {
+  font-weight: 600;
+  color: black;
+}
+.Weak {
+  color: gray;
+  font-weight: 400;
+  font-size: 14px;
+}
+.bgbr_ym {
+  background-color: #fff;
+  border: 1px solid #eef1fa;
+  padding: 20px;
+
+  .nav-tabs {
+    border: none;
+    button.nav-link.active {
+      border: none;
+      color: #2354e6;
+      background-color: #eff5ff;
+      padding: 10px 15px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+  .table{
+    tbody{
+        position: relative;
+
+        &:hover{
+          &::after{
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            z-index: 3;
+            border-radius: 8px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: 0 0 26px 0 rgba(13, 31, 66, 0.07);
+          }  
+        }
+    }
+  }
+}
+td {
+  border-bottom-width: 0px !important;
+  .BuySell {
+    color: #2354e6;
+    background-color: #eff5ff;
+    padding: 10px 15px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+th,
+.col {
+  border-bottom-width: 0px !important;
+  font-size: 11px;
+  font-weight: 400;
+  color: gray;
 }
 header {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 10px 24px;
+  box-sizing: border-box;
+  height: 64px;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  transition: all 0.3s ease 0s;
+  background-color: rgb(12, 12, 15);
+
+  .ym_gap {
+    gap: 0.5%;
     align-items: center;
-    padding: 10px 24px;
-    box-sizing: border-box;
-    height: 64px;
-    position: sticky;
-    top: 0px;
-    z-index: 100;
-    transition: all 0.3s ease 0s;
-    background-color: rgb(12, 12, 15);
+    justify-content: start;
+    padding: 0 !important;
 
-    .ym_gap {
-        gap: .5%;
-        align-items: center;
-        justify-content: start;
-        padding: 0 !important;
-    
-        .Buttons {
-            height: fit-content;
-            margin-right: 6px;
-            margin-left: 8px;
+    .Buttons {
+      height: fit-content;
+      margin-right: 6px;
+      margin-left: 8px;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      border: 1px solid $Btncolor;
+      border-radius: 2px;
+      overflow: hidden;
+      line-height: 12px;
+      font-weight: 500;
+      min-width: fit-content;
+
+      .ActiveBtn {
+        color: rgb(255, 255, 255);
+        border-radius: 0px 4px 4px 0px;
+        background-color: $Btncolor;
+      }
+
+      a {
+        padding: 5px 12px;
+        font-size: 12px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(26, 34, 80);
+        text-decoration: none;
+      }
+    }
+    .MegamenuAfter {
+      position: relative;
+      &::after {
+        font-family: FontAwesome;
+        content: "\f0dd";
+        display: inline-block;
+        top: 0;
+        vertical-align: middle;
+        font-weight: 900;
+        color: white;
+        position: absolute;
+        left: 25px;
+        bottom: 0px;
+        font-size: 13px;
+        transition: 0.3s all ease-in-out;
+      }
+    }
+    .SVGicons {
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+
+      .sub-menu {
+        transition: all 0.7s ease;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        height: 500px;
+        width: 1200px;
+        transform: translate(-200%);
+        z-index: 99;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 24px;
+        background-color: $WhiteColor;
+        border: 1px solid $WhiteColor;
+        z-index: 9;
+        border-radius: 16px;
+        top: 40px;
+        padding: 16px 16px 24px;
+        overflow-y: auto;
+
+        .littleHead {
+          font-size: 12px;
+          color: $Gray;
+          padding: 14px;
+        }
+        .sub-menu-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          .IconSubMenu {
             display: flex;
-            -webkit-box-align: center;
-            align-items: center;
-            border: 1px solid $Btncolor;
-            border-radius: 2px;
-            overflow: hidden;
-            line-height: 12px;
-            font-weight: 500;
-            min-width: fit-content;
+            align-items: start;
+            justify-content: center;
+            gap: 4%;
+          }
 
-            .ActiveBtn {
-                color: rgb(255, 255, 255);
-                border-radius: 0px 4px 4px 0px;
-                background-color: $Btncolor;
+          li {
+            padding: 10px 0;
+            margin: 0;
+            padding: 14px;
+            &:hover {
+              background-color: #f5f5f7;
             }
 
             a {
-                padding: 5px 12px;
-                font-size: 12px;
-                color: rgb(255, 255, 255);
-                background-color: rgb(26, 34, 80);
-                text-decoration: none;
+              text-decoration: none;
+              color: $black;
+              font-size: 14px;
+              font-weight: 500;
+              p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 150%;
+                text-align: left;
+                padding: 0px 14px 0px 0px;
+                color: $Gray;
+              }
             }
+          }
         }
-        .MegamenuAfter{
-            position: relative;
-            &::after {
-                font-family: FontAwesome;
-                content: "\f0dd";
-                display: inline-block;
-                top: 0;
-                vertical-align: middle;
-                font-weight: 900;
-                color: white;
-                position: absolute;
-                left: 25px;
-                bottom: 0px;
-                font-size: 13px;
-                transition: .3s all ease-in-out;
-            }
+      }
+
+      svg {
+        color: $WhiteColor;
+        font-size: 20px;
+        transition: 0.3s all ease-in-out;
+      }
+
+      &:hover {
+        svg {
+          transform: rotate(320deg);
+          color: $Btncolor;
         }
-        .SVGicons {
-            display: flex;
-            align-items: center;
-            position: relative;
-            cursor: pointer;
 
-            .sub-menu {
-                transition: all 0.7s ease;
-                position: absolute;
-                visibility: hidden;
-                opacity: 0;
-                height: 500px;
-                width: 1200px;
-                transform: translate(-200%);
-                z-index: 99;
-                box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 24px;
-                background-color: $WhiteColor;
-                border: 1px solid $WhiteColor;
-                z-index: 9;
-                border-radius: 16px;
-                top: 40px;
-    padding: 16px 16px 24px;
-    overflow-y: auto;
-
-                .littleHead{
-                    font-size: 12px;
-                    color: $Gray;
-                    padding: 14px;
-                }
-                .sub-menu-list {
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-
-                    .IconSubMenu{
-                        display: flex;
-                        align-items: start;
-                        justify-content: center;
-                        gap: 4%;
-                    }
-
-                    li {
-                        padding: 10px 0;
-                        margin: 0;
-                        padding: 14px;
-                        &:hover{
-                            background-color: #f5f5f7;
-                        }
-
-                        a {
-                            text-decoration: none;
-                            color: $black;
-                            font-size: 14px;
-                            font-weight: 500;
-                            p{
-                                font-size: 14px;
-                                font-weight: 400;
-                                line-height: 150%;
-                                text-align: left;
-                                padding: 0px 14px 0px 0px;
-                                color: $Gray;
-                            }
-                        }
-                    }
-                }
-
-            }
-
-            svg {
-                color: $WhiteColor;
-                font-size: 20px;
-                transition: .3s all ease-in-out;
-            }
-
-            &:hover {
-                svg {
-                    transform: rotate(320deg);
-                    color: $Btncolor;
-                }
-
-                &::after {
-                    color: $Btncolor;
-                    transform: rotate(180deg);
-                }
-
-                .sub-menu {
-                    visibility: visible;
-                    opacity: 1;
-                    transform: translate(-20%);
-                }
-            }
-
-
+        &::after {
+          color: $Btncolor;
+          transform: rotate(180deg);
         }
-        .HeadMenu{
-            #ListMenu{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: row;
-                margin-bottom: 0;
-                li{
-                    position: relative;
-                    display: flex;
-                    -webkit-box-align: center;
-                    align-items: center;
-                    height: 100%;
-                    margin: 0px 8px;
-                    padding: 10px 0px;
-                    list-style: none;
-                    a{
-                        font-size: 15px;
-                        color: $WhiteColor;
-                        transition: .3s;
-                        text-decoration: none;
-                    }
-                    &:hover{
-                        a{
-                            color: $Btncolor;
-                        }
-                    }
-                }
-            }
+
+        .sub-menu {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(-20%);
         }
+      }
     }
-    .rightFlex{
+    .HeadMenu {
+      #ListMenu {
         display: flex;
         align-items: center;
-        justify-content: end;
-   
-    .RightMenu{
-        gap: 5%;
-        display: flex;
-        align-items: center;
-        justify-content: end;
-    width: 100%;
-        a{
-            font-size: 14px;
+        justify-content: center;
+        flex-direction: row;
+        margin-bottom: 0;
+        li {
+          position: relative;
+          display: flex;
+          -webkit-box-align: center;
+          align-items: center;
+          height: 100%;
+          margin: 0px 8px;
+          padding: 10px 0px;
+          list-style: none;
+          a {
+            font-size: 15px;
+            color: $WhiteColor;
+            transition: 0.3s;
             text-decoration: none;
-            color: $WhiteColor;
+          }
+          &:hover {
+            a {
+              color: $Btncolor;
+            }
+          }
         }
-        .btn{
-            border-radius: 5px;
-            padding: 3px 11px;
-            font-weight: 600;
-            font-size: 14px;
-        }
-        svg{
-            color: $WhiteColor;
-            font-size: 18px;
-        }
+      }
     }
-}
-}
-
-.HeroArea{
-    position: relative;
-    .middleArea{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .LeftHeroCapsul{
-        h1{
-
-        }
-        p{
-            font-weight: 500;
-        }
-        span{
-            font-size: 14px;
-            color: $Gray;
-            svg{
-                font-size: 18px;
-                margin: 0 .5rem;
-            }
-        }
-        form{
-            margin-top: 30px;
-            input{
-                background-color: $Transparent;
-                outline: none;
-            }
-            button{
-                background-color: $Btncolor;
-                color: $WhiteColor;
-                border: none;
-                border-radius: 5px;
-                font-weight: 700;
-            }
-            .HerosIcons{
-                display: flex;
-                flex-direction: row;
-                margin-left: .5rem;
-                .icons{
-                    display: block;
-                    padding: 1rem;
-                    background-color: $Transparent;
-                    margin: 0 .5rem;
-                    border-radius: 5px;
-                    svg{
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
-
-        .counter-container{
-            margin-top: 60px;
-
-            .counter{
-                font-size: 30px;
-                font-weight: 600;
-            .Dollar{
-font-size: 32px;
-font-weight: 500;
-            }
-                .smallCountertEXT{
-                    font-size: 12px;
-                    font-weight: 600;
-                    color: $black;
-                    margin-left: 3px;
-                }
-
-            }
-            .counter-text{
-                color: rgb(173, 173, 173);
-                font-size: 12px;
-            }
-        }
-    }
-    .HeroAreaSwipers{
-        position: static;
-        margin-bottom: 50px;
-        .swiper-button-prev{
-            right: 50px;
-            left: auto;
-            top: 35%;
-            transform: rotate(90deg);
-            background-color: #f2f3f7;
-            border-radius: 5px;
-            z-index: 99;
-            &::after{
-                font-size: 15px;
-                color: black;
-                font-weight: 900;
-            }
-        }
-        .swiper-button-next{
-            right: 50px;
-            left: auto;
-            top: auto;
-            bottom: 35%;
-            transform: rotate(90deg);
-            background-color: #f2f3f7;
-            border-radius: 5px;
-            z-index: 99;
-            &::after{
-                font-size: 15px;
-                color: black;
-                font-weight: 900;
-            }
-        }
-        .swiper-pagination {
-            right: 52px !important;
-            left: auto !important;
-            display: flex;
-            flex-direction: column;
-            top: 40%;
-            width: auto;
-
-            .swiper-pagination-current{
-                font-size: 40px;
-                font-weight: 700;
-                color: gray;
-            }
-            .swiper-pagination-total{
-                font-size: 15px;
-                font-weight: 600;
-                color: $OldGray;
-            }
-        }
-    }
-    .CommentsSwiper{
-        background-color: $bgColorGray;
-        position: static;
-        height: 56px !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 5px;
-        .slide-content{
-            display: flex;
+  }
+  .rightFlex {
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    padding: 0 25px;
+    justify-content: end;
 
-    .left-content{
+    .RightMenu {
+      gap: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      width: 100%;
+      a {
+        font-size: 14px;
+        text-decoration: none;
+        color: $WhiteColor;
+      }
+      .btn {
+        border-radius: 5px;
+        padding: 3px 11px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      svg {
+        color: $WhiteColor;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.HeroArea {
+  position: relative;
+  .middleArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .LeftHeroCapsul {
+    h1 {
+    }
+    p {
+      font-weight: 500;
+    }
+    span {
+      font-size: 14px;
+      color: $Gray;
+
+      svg {
+        font-size: 15px;
+        margin-right: 0.3rem;
+      }
+    }
+    form {
+      margin-top: 30px;
+      input {
+        background-color: $Transparent;
+        outline: none;
+      }
+      button {
+        background-color: $Btncolor;
+        color: $WhiteColor;
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+      }
+      .HerosIcons {
+        display: flex;
+        flex-direction: row;
+        margin-left: 0.5rem;
+        .icons {
+          display: block;
+          padding: 1rem;
+          background-color: $Transparent;
+          margin: 0 0.5rem;
+          border-radius: 5px;
+          svg {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .counter-container {
+      margin-top: 60px;
+
+      .counter {
+        font-size: 30px;
+        font-weight: 600;
+        .Dollar {
+          font-size: 32px;
+          font-weight: 500;
+        }
+        .smallCountertEXT {
+          font-size: 12px;
+          font-weight: 600;
+          color: $black;
+          margin-left: 3px;
+        }
+      }
+      .counter-text {
+        color: rgb(173, 173, 173);
+        font-size: 12px;
+      }
+    }
+  }
+  .HeroAreaSwipers {
+    position: static;
+    margin-bottom: 50px;
+    .swiper-button-prev {
+      right: 50px;
+      left: auto;
+      top: 35%;
+      transform: rotate(90deg);
+      background-color: #f2f3f7;
+      border-radius: 5px;
+      z-index: 99;
+      &::after {
+        font-size: 15px;
+        color: black;
+        font-weight: 900;
+      }
+    }
+    .swiper-button-next {
+      right: 50px;
+      left: auto;
+      top: auto;
+      bottom: 35%;
+      transform: rotate(90deg);
+      background-color: #f2f3f7;
+      border-radius: 5px;
+      z-index: 99;
+      &::after {
+        font-size: 15px;
+        color: black;
+        font-weight: 900;
+      }
+    }
+    .swiper-pagination {
+      right: 52px !important;
+      left: auto !important;
+      display: flex;
+      flex-direction: column;
+      top: 40%;
+      width: auto;
+
+      .swiper-pagination-current {
+        font-size: 40px;
+        font-weight: 700;
+        color: gray;
+      }
+      .swiper-pagination-total {
+        font-size: 15px;
+        font-weight: 600;
+        color: $OldGray;
+      }
+    }
+  }
+  .CommentsSwiper {
+    background-color: $bgColorGray;
+    position: static;
+    height: 56px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    .slide-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      padding: 0 25px;
+
+      .left-content {
         width: 100%;
         display: flex;
         align-items: center;
         gap: 3%;
         margin-right: 30px;
         position: relative;
-        &::after{
-            content: "";
-            position: absolute;
-            top: 0px;
-            height: 25px;
-            width: 2px;
-            right: -15px;
-            background-color: #dbdbdb66;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0px;
+          height: 25px;
+          width: 2px;
+          right: -15px;
+          background-color: #dbdbdb66;
         }
-    }
-    .right-content{
+      }
+      .right-content {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-left: 30px;
+      }
     }
-        }
-    }
+  }
 }
 
-.CryptoTable{
-    margin:50px 0px;
-    position: relative;
+.CryptoTable {
+  margin: 50px 0px;
+  position: relative;
 }
 
-.EventsArea{
-    margin:50px 0px;
-    position: relative;
-    .HeadEvents{
-        display: flex;
-        justify-content: space-between;
+.EventsArea {
+  margin: 50px 0px;
+  position: relative;
+  .HeadEvents {
+    display: flex;
+    justify-content: space-between;
 
-        .LeftHead{
+    .LeftHead {
+    }
+    .RightHead {
+      a {
+        background-color: #f2f3f7;
+        color: black;
+        outline: none;
+        border: none;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      &:hover {
+        a {
+          color: $Btncolor;
+        }
+      }
+    }
+  }
+  .EventSwiperArea {
+    position: static;
+    margin-top: 30px;
+    .swiper-slide {
+      cursor: pointer;
+
+      &:hover {
+        .text-box {
+          display: block;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+    .swiper-button-next {
+      background-color: #f2f3f7;
+      right: 9%;
+      &::after {
+        font-size: 15px;
+        color: black;
+        font-weight: 900;
+      }
+    }
+    .swiper-button-prev {
+      background-color: #f2f3f7;
+      left: 9%;
+      &::after {
+        font-size: 15px;
+        color: black;
+        font-weight: 900;
+      }
+    }
+    .text-box {
+      opacity: 0;
+      bottom: 0;
+      visibility: hidden;
+      background-color: $WhiteColor;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      box-shadow: rgba(13, 31, 66, 0.07) 0px 7px 10px;
+      padding: 5px;
+      border-bottom: 1px solid thistle;
+      transition: all 0.3s cubic-bezier(0.3, 0, 0.3, 1) 0s;
+      h3 {
+      }
+      p {
+        overflow: hidden;
+        word-break: break-word;
+        font-size: 14px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
+
+.StartedArea {
+  margin: 50px 0px;
+  position: relative;
+
+  .HeadStarted {
+    display: flex;
+    .LeftHead {
+      margin: 15px 0;
+    }
+  }
+  .Boxes {
+    border-radius: 5px;
+    border: 1px solid rgba(213, 213, 213, 0.484);
+    padding: 24px 24px 32px;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    &:hover {
+      box-shadow: rgba(13, 31, 66, 0.07) 0px 7px 20px;
+    }
+    svg {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 25px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 14px;
+      color: gray;
+    }
+    .Btns {
+      gap: 2%;
+      a {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.Startup{
+    width: 100%;
+    margin: 50px 0px;
+    position: relative;
+    background-color: rgb(9, 9, 11);
+    padding: 30px;
+    z-index: 0;
+    &::after{
+        top: 0%;
+        left: 35%;
+        width: 480px;
+        height: 480px;
+        background: #08213d;
+        z-index: -1;
+        content: "";
+        position: absolute;
+        filter: blur(100px);
+        border-radius: 100em;
+    }
+    .BoxesCapsul{
+        h2{
+            font-size: 40px;
+            color: $WhiteColor;
+            font-weight: 600;
+            margin: 40px 0;
+        }
+        p{
+            font-size: 16px;
+            color: $WhiteColor;
 
         }
-        .RightHead{
+        .Btns{
+            margin: 60px 0;
             a{
-                background-color: #f2f3f7;
-                color: black;
-                outline: none;
-                border: none;
                 font-weight: 600;
-                font-size: 14px;
-            }
-            &:hover{
-                a{
-                    color: $Btncolor;
-                }
+                font-size: 15px;
             }
         }
-    }
-    .EventSwiperArea{
-        position: static;
-        margin-top: 30px;
-        .swiper-slide{
-            cursor: pointer;
-        
-            &:hover{
-                .text-box{
-                    display: block;
-                    visibility: visible;
-                    opacity: 1;
+        .CartOther{
+            display: flex;
+            flex-direction: column;
+            background-color: #1d1d24;
+            border-radius: 8px;
+            box-sizing: border-box;
+            padding: 16px;
+            margin-top: 30px;
+            :nth-child(1){
+                color:$WhiteColor;
+            }
+            .GreenArea{
+                gap: 8%;
+                display: flex;
+               .Number_Text{
+                display: flex;
+                flex-direction: column;
+                .Number{
+                color:#30bf87;
+                font-weight: 600;
+                font-size: 20px;
                 }
-            }
-    
-        }
-        .swiper-button-next {
-            background-color: #f2f3f7;
-            right: 9%;
-            &::after{
-              font-size: 15px;
-              color: black;
-              font-weight: 900;
-            }  
-              
-          }
-          .swiper-button-prev {
-            background-color: #f2f3f7;
-            left: 9%;
-            &::after{
-              font-size: 15px;
-              color: black;
-              font-weight: 900;
-            }  
-              
-          }
-        .text-box{
-            opacity: 0;
-            bottom: 0;
-            visibility: hidden;
-            background-color: $WhiteColor;
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
-            box-shadow: rgba(13, 31, 66, 0.07) 0px 7px 10px;
-            padding: 5px;
-            border-bottom: 1px solid thistle;
-            transition: all 0.3s cubic-bezier(0.3, 0, 0.3, 1) 0s;
-            h3{
-
-            }
-            p{
-                
-                overflow: hidden;
-                word-break: break-word;
-                font-size: 14px;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
+                .Text{
+                   color: #7e8494;
+                   font-size: 12px;
+                }
+               } 
             }
         }
     }

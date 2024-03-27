@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay } from 'swiper';
-import { Pagination, Navigation} from 'swiper/modules';
+// import SwiperCore, { Autoplay } from 'swiper';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
@@ -18,7 +18,7 @@ const images = [
 ];
 
 const HeroAreaSwiper = () => {
-    SwiperCore.use([Autoplay]);
+    // SwiperCore.use([Autoplay]);
 
     const [swiperHeight, setSwiperHeight] = useState(null);
 
@@ -46,7 +46,10 @@ const HeroAreaSwiper = () => {
                 slidesPerView={1}
                 spaceBetween={20}
                 loop={true}
-                autoplay={{ delay: 100, disableOnInteraction: true }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
                 direction={'vertical'}
                 pagination={{
                     type: 'fraction',
