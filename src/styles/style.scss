@@ -4,12 +4,16 @@ $black :  #000;
 $Gray : #646464;
 $Transparent : #ebedf2;
 $OldGray : #70798c;
+$bgColorGray :#f8f9fb;
 h1{
     font-size: 48px;
     font-weight: 700;
 }
 .ym_SwiperClass{
-    max-width: 85%;
+    max-width: 95%;
+}
+body{
+    overflow-x: hidden;
 }
 header {
     display: flex;
@@ -233,6 +237,7 @@ header {
 }
 
 .HeroArea{
+    position: relative;
     .middleArea{
         display: flex;
         align-items: center;
@@ -264,6 +269,7 @@ header {
                 color: $WhiteColor;
                 border: none;
                 border-radius: 5px;
+                font-weight: 700;
             }
             .HerosIcons{
                 display: flex;
@@ -301,9 +307,106 @@ font-weight: 500;
 
             }
             .counter-text{
-                color: $OldGray;
+                color: rgb(173, 173, 173);
                 font-size: 12px;
             }
         }
     }
+    .HeroAreaSwipers{
+        position: static;
+        margin-bottom: 50px;
+        .swiper-button-prev{
+            right: 50px;
+            left: auto;
+            top: 35%;
+            transform: rotate(90deg);
+            background-color: #f2f3f7;
+            border-radius: 5px;
+            z-index: 99;
+            &::after{
+                font-size: 15px;
+                color: black;
+                font-weight: 900;
+            }
+        }
+        .swiper-button-next{
+            right: 50px;
+            left: auto;
+            top: auto;
+            bottom: 35%;
+            transform: rotate(90deg);
+            background-color: #f2f3f7;
+            border-radius: 5px;
+            z-index: 99;
+            &::after{
+                font-size: 15px;
+                color: black;
+                font-weight: 900;
+            }
+        }
+        .swiper-pagination {
+            right: 52px !important;
+            left: auto !important;
+            display: flex;
+            flex-direction: column;
+            top: 40%;
+            width: auto;
+
+            .swiper-pagination-current{
+                font-size: 40px;
+                font-weight: 700;
+                color: gray;
+            }
+            .swiper-pagination-total{
+                font-size: 15px;
+                font-weight: 600;
+                color: $OldGray;
+            }
+        }
+    }
+    .CommentsSwiper{
+        background-color: $bgColorGray;
+        position: static;
+        height: 56px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        .slide-content{
+            display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 25px;
+
+    .left-content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 3%;
+        margin-right: 30px;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0px;
+            height: 25px;
+            width: 2px;
+            right: -15px;
+            background-color: #dbdbdb66;
+        }
+    }
+    .right-content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 30px;
+    }
+        }
+    }
+}
+
+.CryptoTable{
+    margin-top: 50px;
 }

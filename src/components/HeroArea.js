@@ -6,7 +6,7 @@ import {
   fa,
 } from "../../node_modules/@fortawesome/free-solid-svg-icons";
 import HeroAreaSwiper from "./HeroAreaSwiper";
-
+import CommentsSwiper from "./CommentsSwiper";
 const HeroArea = () => {
     return (
       <section className="HeroArea">
@@ -85,6 +85,9 @@ const HeroArea = () => {
             </div>
             <div className="col-md-6">
               <HeroAreaSwiper />
+            </div>
+            <div className="col-md-12">
+<CommentsSwiper />
             </div>
           </div>
         </div>

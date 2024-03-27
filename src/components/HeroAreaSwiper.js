@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay } from 'swiper';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation} from 'swiper/modules';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-SwiperCore.use([Autoplay, Pagination]);
 
 const images = [
     'img1.png',
@@ -19,10 +18,9 @@ const images = [
 ];
 
 const HeroAreaSwiper = () => {
-    const [swiperHeight, setSwiperHeight] = useState(null);
+    SwiperCore.use([Autoplay]);
 
-    let appendNumber = 10;
-    let prependNumber = 1;
+    const [swiperHeight, setSwiperHeight] = useState(null);
 
     useEffect(() => {
         const handleResize = () => {
@@ -47,6 +45,8 @@ const HeroAreaSwiper = () => {
             <Swiper
                 slidesPerView={1}
                 spaceBetween={20}
+                loop={true}
+                autoplay={{ delay: 100, disableOnInteraction: true }}
                 direction={'vertical'}
                 pagination={{
                     type: 'fraction',
