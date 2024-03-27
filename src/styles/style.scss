@@ -408,5 +408,94 @@ font-weight: 500;
 }
 
 .CryptoTable{
-    margin-top: 50px;
+    margin:50px 0px;
+    position: relative;
+}
+
+.EventsArea{
+    margin:50px 0px;
+    position: relative;
+    .HeadEvents{
+        display: flex;
+        justify-content: space-between;
+
+        .LeftHead{
+
+        }
+        .RightHead{
+            a{
+                background-color: #f2f3f7;
+                color: black;
+                outline: none;
+                border: none;
+                font-weight: 600;
+                font-size: 14px;
+            }
+            &:hover{
+                a{
+                    color: $Btncolor;
+                }
+            }
+        }
+    }
+    .EventSwiperArea{
+        position: static;
+        margin-top: 30px;
+        .swiper-slide{
+            cursor: pointer;
+        
+            &:hover{
+                .text-box{
+                    display: block;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+    
+        }
+        .swiper-button-next {
+            background-color: #f2f3f7;
+            right: 9%;
+            &::after{
+              font-size: 15px;
+              color: black;
+              font-weight: 900;
+            }  
+              
+          }
+          .swiper-button-prev {
+            background-color: #f2f3f7;
+            left: 9%;
+            &::after{
+              font-size: 15px;
+              color: black;
+              font-weight: 900;
+            }  
+              
+          }
+        .text-box{
+            opacity: 0;
+            bottom: 0;
+            visibility: hidden;
+            background-color: $WhiteColor;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            box-shadow: rgba(13, 31, 66, 0.07) 0px 7px 10px;
+            padding: 5px;
+            border-bottom: 1px solid thistle;
+            transition: all 0.3s cubic-bezier(0.3, 0, 0.3, 1) 0s;
+            h3{
+
+            }
+            p{
+                
+                overflow: hidden;
+                word-break: break-word;
+                font-size: 14px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+    }
 }
