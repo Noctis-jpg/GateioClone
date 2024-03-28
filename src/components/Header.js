@@ -4,6 +4,7 @@ import { faCompass, faUserClock, faDownload, faSearch, faBars } from '../../node
 const Header = () => {
   return (
     <header>
+
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-md-8 col-5 pad-0 d-flex ym_gap'>
