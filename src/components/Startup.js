@@ -6,7 +6,7 @@ const Startup = () => {
 <section className='Startup'>
     <div className='container'>
         <div className='row'>
-            <div className='col-md-4'>
+            <div className='col-md-4 col-12'>
                 <div className='BoxesCapsul'>
                   <h2>Startup</h2>
                   <p>Yeni kripto projeleri için launchpad.Gate Startup aracılığıyla kripto airdrop'larını en erken alan siz olun</p>
@@ -31,7 +31,7 @@ const Startup = () => {
 
                 </div>
             </div>
-            <div className='col-md-8'>
+            <div className='col-md-8 col-12'>
                 <SwiperCards />
             </div>
         </div>

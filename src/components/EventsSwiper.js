@@ -29,18 +29,26 @@ const texts = [
 
 const EventSwiper = () => {
   return (
-    <Swiper
-      spaceBetween={30}
-      slidesPerView={4}
-      pagination={{
-        type: 'fraction',
-        clickable: true,
-      }}
-      modules={[Navigation]}
-      navigation={true}
-      mousewheel 
-      className='EventSwiperArea'
-    >
+<Swiper
+  spaceBetween={30}
+  slidesPerView={4}
+  pagination={{
+    type: 'fraction',
+    clickable: true,
+  }}
+  modules={[Navigation]}
+  navigation={true}
+  mousewheel 
+  className='EventSwiperArea'
+  breakpoints={{
+    0: {
+      slidesPerView: 1.5,
+    },
+    720: {
+      slidesPerView: 1.5,
+    },
+  }}
+>
 
       {images.map((image, index) => (
         <SwiperSlide key={index}>

@@ -12,7 +12,7 @@ const HeroArea = () => {
       <section className="HeroArea">
         <div className="container">
           <div className="row">
-            <div className="col-md-6 middleArea">
+            <div className="col-md-6 col-12 middleArea">
               <div className="LeftHeroCapsul">
                 <h1>Kriptoya Açılan Kapı</h1>
                 <p>
@@ -36,7 +36,7 @@ const HeroArea = () => {
                   >
                     Hesap Oluştur
                   </button>
-                  <div className="HerosIcons">
+                  <div className="HerosIcons DesktopIcons">
                     <div className="icons v">
                       <FontAwesomeIcon icon={faAppleAlt} />
                     </div>
@@ -47,9 +47,21 @@ const HeroArea = () => {
                       <FontAwesomeIcon icon={faAppleAlt} />
                     </div>
                   </div>
-                </form>
-                <div class="row">
-                  <div class="col-md-3">
+                  </form>
+                  <div className="HerosIcons MobileIcons">
+                    <div className="icons v">
+                      <FontAwesomeIcon icon={faAppleAlt} />
+                    </div>
+                    <div className="icons py-3">
+                      <FontAwesomeIcon icon={faAppleAlt} />
+                    </div>
+                    <div className="icons py-3">
+                      <FontAwesomeIcon icon={faAppleAlt} />
+                    </div>
+                  </div>
+            
+                <div class="row MobileMt">
+                  <div class="col-md-3 col-6">
                     <div class="counter-container">
                       <h3 class="counter">
                         <span className="Dollar"></span>9.37
@@ -58,13 +70,13 @@ const HeroArea = () => {
                       <p class="counter-text">24S İşlem Hacmi</p>
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-6">
                     <div class="counter-container">
                       <h3 class="counter">1700+</h3>
                       <p class="counter-text">Listelenmiş kripto para birimi</p>
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-6">
                     <div class="counter-container">
                       <h3 class="counter">
                         14+<span className="smallCountertEXT">M</span>
@@ -72,7 +84,7 @@ const HeroArea = () => {
                       <p class="counter-text">Kayıtlı Kullanıcı</p>
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-md-3 col-6">
                     <div class="counter-container">
                       <h3 class="counter">
                         498<span className="smallCountertEXT">%</span>
@@ -83,10 +95,10 @@ const HeroArea = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 col-12">
               <HeroAreaSwiper />
             </div>
-            <div className="col-md-12">
+            <div className="col-md-12 col-12">
 <CommentsSwiper />
             </div>
           </div>

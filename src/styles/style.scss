@@ -5,6 +5,8 @@ $Gray: #646464;
 $Transparent: #ebedf2;
 $OldGray: #70798c;
 $bgColorGray: #f8f9fb;
+$swiper-cards-width: 460px;
+$swiper-cards-height: 490px;
 h1 {
   font-size: 48px;
   font-weight: 700;
@@ -360,7 +362,9 @@ header {
         }
       }
     }
-
+.MobileIcons{
+  display: none;
+}
     .counter-container {
       margin-top: 60px;
 
@@ -612,7 +616,7 @@ header {
     margin: 50px 0px;
     position: relative;
     background-color: rgb(9, 9, 11);
-    padding: 30px;
+    padding: 90px;
     z-index: 0;
     &::after{
         top: 0%;
@@ -675,4 +679,104 @@ header {
             }
         }
     }
+
+    
+    .SwiperCars {
+      width: $swiper-cards-width;
+      height: $swiper-cards-height;
+      position: static;
+      .swiper-button-next {
+        background-color: #f2f3f7;
+        border-radius: 5px;
+        z-index: 99;
+        right: -100px;
+        &::after{
+          font-size: 15px;
+          color: black;
+          font-weight: 900;
+        }
+      }
+      .swiper-button-prev {
+        background-color: #f2f3f7;
+        border-radius: 5px;
+        z-index: 99;
+        left: -50px;
+
+        &::after{
+          font-size: 15px;
+          color: black;
+          font-weight: 900;
+        }
+    }
+      .swiper-slide {
+
+        border-radius: 18px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 8px;
+        background: rgb(21, 23, 28);
+        backdrop-filter: blur(30px);
+      }
+      .MainCardsCapsul{
+        
+        position: relative;
+        .TopArea{
+          position: relative;
+          .BottomAlert{
+            background: rgb(47, 52, 64);
+            position: absolute;
+            margin: 0;
+            bottom: 0;
+            color: #17e5a1;
+            font-size: 13px;
+            width: 100%;
+            text-align: center;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+          }
+          img{
+            object-fit: cover;
+          }
+        }
+        .BottomArea{
+          margin: 10px;
+          padding: 0 .5rem;
+          .Buttons{
+            display: flex;
+            gap: 3%;
+            padding: .5rem 0;
+            a{
+              font-size: 14px;
+              font-weight: 600;
+            }
+          }
+          .CardsHeading{
+            h3{
+              font-size: 20px;
+              font-weight: 600;
+            }
+            .CardsFooter{
+              width: 100%;
+              padding: 16px 0px;
+              box-sizing: border-box;
+              border-radius: 4px;
+              background-color: #14141a;
+
+              .numberSupp{
+                font-size: 24px;
+                .TextSupp{
+                  font-size: 13px;
+                  color: gray;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+}
+.footer{
+  display: none;
 }

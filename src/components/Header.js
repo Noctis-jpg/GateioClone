@@ -6,7 +6,7 @@ const Header = () => {
     <header>
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-md-8 pad-0 d-flex ym_gap'>
+          <div className='col-md-8 col-5 pad-0 d-flex ym_gap'>
             <div className='Logo'>
               <img width="120" height="auto" src="/logogate.png" alt="" />
             </div>
@@ -138,7 +138,7 @@ const Header = () => {
 
 
           </div>
-          <div className='col-md-4 rightFlex'>
+          <div className='col-md-4 col-7 rightFlex'>
     <div className='RightMenu'>
       <a href='#' className='Login'>Giriş Yap</a>
       <button type="button" className='btn btn-primary'>Hesap Oluştur</button>

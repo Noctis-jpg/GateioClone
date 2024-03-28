@@ -3,3 +3,148 @@
         height: 27rem;
     }
 }
+
+@media screen and (max-width:720px){
+    // .bgbr_ym{
+    //     padding: 0px;
+    // }
+    
+h1{
+    font-size: 28px;
+}
+    header{
+        .ym_gap{
+            .SVGicons{
+                display: none;
+            }
+            .HeadMenu{
+             #ListMenu{
+                display: none;
+             }
+            }
+        }
+        .Buttons{
+            display: none !important;
+        }
+        .RightMenu{
+            .btn-primary{
+                display: none;
+            }
+        }
+    }
+    .HeroArea{
+        .middleArea{
+            display: inline;
+        }
+        .LeftHeroCapsul {
+            margin-top: 30px;
+            form{
+         
+            }
+            .MobileIcons{
+                display: flex;
+                flex-direction: row;
+                margin-left: 0.5rem;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30px;
+                .icons {
+                  display: block;
+                  padding: 1rem;
+                  background-color: $Transparent;
+                  margin: 0 0.5rem;
+                  border-radius: 5px;
+                  svg {
+                    font-size: 18px;
+                  }
+                }
+            }
+            .DesktopIcons{
+                display: none !important;
+            }
+            .MobileMt{
+                margin-top: 2rem;
+            }
+            .counter-container{
+                margin-top: 20px;
+            }
+            
+        }
+        .HeroAreaSwipers {
+            .swiper-button-next{
+                right: 28px;
+                bottom: 30%;
+            }
+            .swiper-button-prev {
+                right: 28px;
+                top: 55%;
+            }
+            .swiper-pagination {
+                right: 30px !important;
+                display: none;
+            }
+        }
+    } 
+    .StartedArea{
+        margin: 0px 0px;
+        .Boxes{
+            margin: 15px 0;
+        }
+    }
+    .Startup{
+        margin: 0px 0px;
+        padding: 20px;
+
+        .row{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &::after{
+            width: 60%;
+            height: 100%;
+            left: 0;
+        }
+        .SwiperCars {
+            width: 100%;
+            height: auto;
+            padding: 30px;
+
+            .swiper-button-next{
+                right: 40%;
+                top: 100%;
+            }
+            
+            .swiper-button-prev{
+                left: 40%;
+                top: 100%;
+            }
+        }
+        .BoxesCapsul {
+            .Btns{
+                margin: 30px 0;
+
+            }
+        }
+    }
+    .EventsArea{
+        .EventSwiperArea {
+            .text-box{
+                opacity: 1;
+                visibility: visible;
+
+            }
+        }
+    }
+    .table > :not(caption) > * > *{
+        padding: 0.3rem 0.3rem;
+    }
+    .CryptoTable{
+        margin: 10px 0px;
+        .col-md-8{
+            display: none;
+        }
+        .col-md-4{
+            margin-top: 20px;
+        }
+    }
+}
